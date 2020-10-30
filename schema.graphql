@@ -8,3 +8,7 @@ type Company {
   name: String
   employees: [Person] @relation(name: "WORKS_FOR", direction: "IN")
 }
+
+type User {
+  name: String
+}
