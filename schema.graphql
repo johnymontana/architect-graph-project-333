@@ -1,0 +1,10 @@
+type Person {
+  name: String
+  age: Int
+  worksFor: [Company] @relation(name: "WORKS_FOR", direction: "OUT")
+}
+
+type Company {
+  name: String
+  employees: [Person] @relation(name: "WORKS_FOR", direction: "IN")
+}
